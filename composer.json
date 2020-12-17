@@ -60,5 +60,12 @@
             "allow-contrib": false,
             "require": "4.4.*"
         }
+    },
+    "require-dev": {
+        "symfony/debug-bundle": "^4.4",
+        "symfony/monolog-bundle": "^3.0",
+        "symfony/stopwatch": "^4.4",
+        "symfony/var-dumper": "^4.4",
+        "symfony/web-profiler-bundle": "^4.4"
     }
 }
