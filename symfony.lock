@@ -87,6 +87,9 @@
     "laminas/laminas-zendframework-bridge": {
         "version": "1.1.1"
     },
+    "monolog/monolog": {
+        "version": "1.26.0"
+    },
     "ocramius/proxy-manager": {
         "version": "2.10.0"
     },
@@ -139,8 +142,23 @@
     "symfony/debug": {
         "version": "v4.4.17"
     },
+    "symfony/debug-bundle": {
+        "version": "4.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.1",
+            "ref": "f8863cbad2f2e58c4b65fa1eac892ab189971bea"
+        },
+        "files": [
+            "./config/packages/dev/debug.yaml"
+        ]
+    },
     "symfony/dependency-injection": {
         "version": "v4.4.17"
+    },
+    "symfony/deprecation-contracts": {
+        "version": "v2.2.0"
     },
     "symfony/doctrine-bridge": {
         "version": "v4.4.17"
@@ -208,8 +226,29 @@
     "symfony/mime": {
         "version": "v4.4.17"
     },
+    "symfony/monolog-bridge": {
+        "version": "v4.4.17"
+    },
+    "symfony/monolog-bundle": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.3",
+            "ref": "d7249f7d560f6736115eee1851d02a65826f0a56"
+        },
+        "files": [
+            "./config/packages/dev/monolog.yaml",
+            "./config/packages/prod/deprecations.yaml",
+            "./config/packages/prod/monolog.yaml",
+            "./config/packages/test/monolog.yaml"
+        ]
+    },
     "symfony/orm-pack": {
         "version": "v2.0.0"
+    },
+    "symfony/polyfill-intl-grapheme": {
+        "version": "v1.20.0"
     },
     "symfony/polyfill-intl-idn": {
         "version": "v1.20.0"
@@ -229,6 +268,12 @@
     "symfony/polyfill-php80": {
         "version": "v1.20.0"
     },
+    "symfony/property-access": {
+        "version": "v5.2.1"
+    },
+    "symfony/property-info": {
+        "version": "v5.2.1"
+    },
     "symfony/routing": {
         "version": "4.2",
         "recipe": {
@@ -243,8 +288,17 @@
             "./config/routes.yaml"
         ]
     },
+    "symfony/security": {
+        "version": "v4.4.18"
+    },
     "symfony/service-contracts": {
         "version": "v2.2.0"
+    },
+    "symfony/stopwatch": {
+        "version": "v4.4.17"
+    },
+    "symfony/string": {
+        "version": "v5.2.1"
     },
     "symfony/translation-contracts": {
         "version": "v2.3.0"
