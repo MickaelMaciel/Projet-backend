@@ -23,12 +23,12 @@ class ArticleSimple
     private $articleSimpleName;
 
     /**
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="integer")
      */
     private $articleSimplePrixAchat;
 
     /**
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="integer")
      */
     private $articleSimplePrixVente;
 
@@ -60,24 +60,24 @@ class ArticleSimple
         return $this;
     }
 
-    public function getArticleSimplePrixAchat(): ?float
+    public function getArticleSimplePrixAchat(): ?int
     {
         return $this->articleSimplePrixAchat;
     }
 
-    public function setArticleSimplePrixAchat(float $articleSimplePrixAchat): self
+    public function setArticleSimplePrixAchat(int $articleSimplePrixAchat): self
     {
         $this->articleSimplePrixAchat = $articleSimplePrixAchat;
 
         return $this;
     }
 
-    public function getArticleSimplePrixVente(): ?float
+    public function getArticleSimplePrixVente(): ?int
     {
         return $this->articleSimplePrixVente;
     }
 
-    public function setArticleSimplePrixVente(float $articleSimplePrixVente): self
+    public function setArticleSimplePrixVente(int $articleSimplePrixVente): self
     {
         $this->articleSimplePrixVente = $articleSimplePrixVente;
 
