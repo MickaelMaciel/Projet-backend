@@ -17,6 +17,13 @@ security:
         main:
             anonymous: lazy
             provider: app_user_provider
+            guard:
+                authenticators:
+                    - App\Security\LoginFormAuthenticator
+            logout:
+                path: app_logout
+                # where to redirect after logout
+                # target: app_any_route
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication
@@ -29,3 +36,8 @@ security:
     access_control:
         # - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/admin, roles: ROLE_EDITOR }
+    #on peut faire hériter des roles (ex:un admin hérite des droit des éditeurs et des modérateurs)
+    role_hierarchy:
+        #ROLE_ADMIN: [ROLE_EDITOR,ROLE_MODERATOR]
+        ROLE_ADMIN: [ROLE_EDITOR]
