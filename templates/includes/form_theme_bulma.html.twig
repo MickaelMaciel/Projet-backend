@@ -102,7 +102,7 @@
             {%- set attr = attr|merge({class: (attr.class|default('') ~ ' file-input')|trim}) -%}
             <input type="file" {{ block('widget_attributes') }}>
             <span class="file-cta">
-                <span class="file-icon"><i class="fad fa-upload"></i></span>
+                <span class="file-icon"><i class="fas fa-upload"></i></span>
                 <span class="file-label">Fichier ...</span>
             </span>
             <span class="file-name">Aucun fichier</span>
@@ -127,7 +127,7 @@
     {% if help is not empty %}
         <div class="help has-addons">
             <span class="icon has-text-info">
-                <i class="fal fa-question-circle"></i>
+                <i class="fas fa-question-circle"></i>
             </span>
             <span>
                 {{ help }}
@@ -171,7 +171,7 @@
     {%- if errors|length > 0 -%}
         {%- for error in errors -%}
             <p class="help is-danger">
-                <span class="icon is-danger"><i class="far fa-exclamation-circle"></i></span>
+                <span class="icon is-danger"><i class="fas fa-exclamation-circle"></i></span>
                 <span>{{ error.message }}</span>
             </p>
         {%- endfor -%}

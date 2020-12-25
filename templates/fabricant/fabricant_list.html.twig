@@ -1,0 +1,36 @@
+{# {% extends "admin/_template.html.twig" %} #}
+{% extends "_template.html.twig" %}
+
+{% block title %}Fabricant{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <h1 class="title">Fabricants: {{fabricant_list|length}}</h1>
+    </div>
+
+      {% include "includes/flash.html.twig" %}
+
+    <table class="table is-fullwidth">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Description</th>
+                <th><a href="{{path('fabricant_add')}}" class="button is-info is-small">Nouveau fabricant</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for fabricant in fabricant_list %}
+                <tr>
+                    <td>{{fabricant.name|slice(0,25)}}</td>
+                    <td>{{fabricant.fabricantDescription|slice(0,75)}}</td>
+                    <td>
+                        <a href="{{path('fabricant_edit',{id:fabricant.id})}}" class="button is-small is-success"><i class="fas fa-edit"></i></a>
+                        <a href="{{path('fabricant_delete',{id:fabricant.id})}}" class="button is-small is-danger"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                    
+                </tr>
+                
+            {% endfor %}
+        </tbody>
+    </table>    
+{% endblock %}

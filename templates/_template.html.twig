@@ -35,6 +35,20 @@
                 <a class="navbar-item" href="{#{{ path('ranking_news') }}#}">
                     CONSULTER
                 </a>
+
+                <a class="navbar-item" href="{{ path('fabricant_list') }}">
+                    FABRICANT
+                </a>
+
+              
+
+                  {% if is_granted('ROLE_EDITOR') %}
+                    
+                 <a class="navbar-item" href="{{ path('fabricant_list') }}">
+                    UTILISATEUR
+                </a>
+
+                 {% endif %} 
             </div>
 
             <div class="navbar-end">
@@ -47,13 +61,13 @@
                             <a class="button is-light is-small" href="{{ path('app_logout')}}">
                                 Déconnexion
                             </a>
-                        {% else %}
+                        {# {% else %} #}
                             {# <a class="button is-primary is-small" href="#">
                                 <strong>Inscription</strong>
                             </a> #}
-                            <a class="button is-light is-small" href="{{ path('app_login') }}">
+                            {# <a class="button is-light is-small" href="{{ path('app_login') }}">
                                 Connexion
-                            </a>
+                            </a> #}
                         {% endif %}
 
                         {# {% if is_granted('ROLE_EDITOR') %}
