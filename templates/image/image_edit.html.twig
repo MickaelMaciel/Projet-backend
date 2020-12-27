@@ -1,0 +1,12 @@
+{# {% extends "admin/_template.html.twig" %} #}
+{% extends "_template.html.twig" %}
+
+{% block title %}Image-{{image.url}}{% endblock %}
+
+{% block content %}
+<div class="section">
+    <h1 class="title">{{image.url}}</h1>
+    {% include "image/_image_form.html.twig" %}
+    {% include "includes/flash.html.twig" %}
+</div>
+{% endblock %}

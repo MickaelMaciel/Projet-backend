@@ -1,0 +1,23 @@
+{# {% extends "admin/_template.html.twig" %} #}
+{% extends "_template.html.twig" %}
+
+{% block title %}suppression de {{typeProduit.name}}{% endblock %}
+
+{% block content %}
+   
+    <div class="section">
+        <h1 class="title">Suppression du type de produit {{typeProduit.name}}</h1>
+
+
+        {{form_start(confirmation_form)}}
+
+            {{form_row(confirmation_form.confirmation,{
+                label: 'je confirme la suppression du typeProduit : ' ~ typeProduit.name ~ '.'
+            })}}
+
+            <button type="submit" class="button is-danger">Supprimer</button>
+
+
+        {{form_end(confirmation_form)}}
+    </div>
+{% endblock %}

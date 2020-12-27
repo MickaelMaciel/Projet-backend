@@ -1,0 +1,11 @@
+    {{form_start(produitConfigurable_form)}}
+
+         {{form_row(produitConfigurable_form.name,{label:'Nom :'})}}
+        {# {{form_row(produitConfigurable_form.produitConfigurableCreationAt,{label:'Date de création :'})}}
+         {{form_row(produitConfigurable_form.produitConfigurableMajAt,{label:'Date de maj :'})}} #}
+           {{form_row(produitConfigurable_form.sousTypeProduit,{label:'Sous type produit :'})}}
+         
+         
+         <button type="submit" class="button is-primary">Enregistrer</button>
+
+    {{form_end(produitConfigurable_form)}}

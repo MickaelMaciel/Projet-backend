@@ -1,0 +1,36 @@
+{# {% extends "admin/_template.html.twig" %} #}
+{% extends "_template.html.twig" %}
+
+{% block title %}Couleur{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <h1 class="title">Couleurs: {{variationCouleur_list|length}}</h1>
+    </div>
+
+      {% include "includes/flash.html.twig" %}
+
+    <table class="table is-fullwidth">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                
+                <th><a href="{{path('variationCouleur_add')}}" class="button is-info is-small">Nouvelle couleur</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for variationCouleur in variationCouleur_list %}
+                <tr>
+                    <td>{{variationCouleur.variationCouleurname}}</td>
+                    
+                    <td>
+                        <a href="{{path('variationCouleur_edit',{id:variationCouleur.id})}}" class="button is-small is-success"><i class="fas fa-edit"></i></a>
+                        <a href="{{path('variationCouleur_delete',{id:variationCouleur.id})}}" class="button is-small is-danger"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                    
+                </tr>
+                
+            {% endfor %}
+        </tbody>
+    </table>    
+{% endblock %}

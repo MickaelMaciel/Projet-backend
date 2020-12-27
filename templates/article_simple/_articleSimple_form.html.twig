@@ -1,0 +1,12 @@
+    {{form_start(articleSimple_form)}}
+
+          {{form_row(articleSimple_form.articleSimpleName,{label:'Nom :'})}}
+          {{form_row(articleSimple_form.articleSimplePrixAchat,{label:'Prix d\'achat HT :'})}}
+          {{form_row(articleSimple_form.articleSimplePrixVente,{label:'Prix de vente TTC :'})}}
+          {{form_row(articleSimple_form.produitConfigurable,{label:'produit configurable :'})}}
+          {{form_row(articleSimple_form.variationCouleur,{label:'Couleur :'})}}
+      
+      
+         <button type="submit" class="button is-primary">Enregistrer</button>
+
+    {{form_end(articleSimple_form)}}

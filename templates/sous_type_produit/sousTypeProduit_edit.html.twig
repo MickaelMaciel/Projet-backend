@@ -1,0 +1,12 @@
+{# {% extends "admin/_template.html.twig" %} #}
+{% extends "_template.html.twig" %}
+
+{% block title %}Sous Type Produit-{{sousTypeProduit.name}}{% endblock %}
+
+{% block content %}
+<div class="section">
+    <h1 class="title">{{sousTypeProduit.name}}</h1>
+    {% include "sous_type_produit/_sousTypeProduit_form.html.twig" %}
+    {% include "includes/flash.html.twig" %}
+</div>
+{% endblock %}

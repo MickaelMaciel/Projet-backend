@@ -1,0 +1,16 @@
+{# {% extends "admin/_template.html.twig" %} #}
+{% extends "_template.html.twig" %}
+
+{% block title %}Nouvelle couleur{% endblock %}
+
+{% block content %}
+<div class="section">
+    <h1 class="title">Nouvelle couleur</h1>
+       
+       {% include "variation_couleur/_variationCouleur_form.html.twig" %}
+    
+   
+</div>
+
+
+{% endblock %}

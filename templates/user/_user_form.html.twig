@@ -1,0 +1,9 @@
+    {{form_start(user_form)}}
+
+         {{form_row(user_form.email,{label:'Email :'})}}
+         {{form_row(user_form.roles,{label:'roles :'})}}
+         {{form_row(user_form.password,{label:'password :'})}}
+       
+         <button type="submit" class="button is-primary">Enregistrer</button>
+
+    {{form_end(user_form)}}

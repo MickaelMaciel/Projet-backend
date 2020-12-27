@@ -1,0 +1,16 @@
+{# {% extends "admin/_template.html.twig" %} #}
+{% extends "_template.html.twig" %}
+
+{% block title %}Nouvelle Image{% endblock %}
+
+{% block content %}
+<div class="section">
+    <h1 class="title">Nouvelle image</h1>
+       
+       {% include "image/_image_form.html.twig" %}
+    
+   
+</div>
+
+
+{% endblock %}

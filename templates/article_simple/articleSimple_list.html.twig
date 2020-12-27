@@ -1,0 +1,36 @@
+{# {% extends "admin/_template.html.twig" %} #}
+{% extends "_template.html.twig" %}
+
+{% block title %}Fabricant{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <h1 class="title">Article simple: {{articleSimple_list|length}}</h1>
+    </div>
+
+      {% include "includes/flash.html.twig" %}
+
+    <table class="table is-fullwidth">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Description</th>
+                <th><a href="{{path('articleSimple_add')}}" class="button is-info is-small">Nouveau articleSimple</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for articleSimple in articleSimple_list %}
+                <tr>
+                    <td>{{articleSimple.name|slice(0,25)}}</td>
+                    <td>{{articleSimple.articleSimpleDescription|slice(0,75)}}</td>
+                    <td>
+                        <a href="{{path('articleSimple_edit',{id:articleSimple.id})}}" class="button is-small is-success"><i class="fas fa-edit"></i></a>
+                        <a href="{{path('articleSimple_delete',{id:articleSimple.id})}}" class="button is-small is-danger"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                    
+                </tr>
+                
+            {% endfor %}
+        </tbody>
+    </table>    
+{% endblock %}

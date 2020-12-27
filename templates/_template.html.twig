@@ -24,27 +24,66 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="{#{{ path('artist_list') }}#}">
+            
+                {# <a class="navbar-item" href="">
                     CREER
                 </a>
 
-                <a class="navbar-item" href="{#{{ path('ranking_news') }}#}">
+                <a class="navbar-item" href="">
                     MODIFIER
                 </a>
 
-                <a class="navbar-item" href="{#{{ path('ranking_news') }}#}">
+                <a class="navbar-item" href="">
                     CONSULTER
-                </a>
+                </a>  #}
+               
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">PRODUIT</a>
 
+                        <div class="navbar-dropdown">
+                            
+                            <a class="navbar-item" href="{{ path('typeProduit_list') }}">
+                                TYPE PRODUIT
+                            </a>
+
+                            <a class="navbar-item" href="{{ path('sousTypeProduit_list') }}">
+                                SOUS TYPE PRODUIT
+                            </a>
+
+                            <a class="navbar-item" href="{{ path('produitConfigurable_list') }}">
+                                CONFIGURABLE
+                            </a>
+
+                            <a class="navbar-item" href="{{ path('articleSimple_list') }}">
+                                ARTICLE SIMPLE
+                            </a>
+
+          
+                            {# <hr class="navbar-divider"> #}
+                              
+                        </div>
+                </div>
+    
                 <a class="navbar-item" href="{{ path('fabricant_list') }}">
                     FABRICANT
                 </a>
+
+                <a class="navbar-item" href="{{ path('variationCouleur_list') }}">
+                    COULEUR
+                </a>
+
+                <a class="navbar-item" href="{{ path('image_list') }}">
+                    IMAGE
+                </a>
+
+
+                
 
               
 
                   {% if is_granted('ROLE_EDITOR') %}
                     
-                 <a class="navbar-item" href="{{ path('fabricant_list') }}">
+                 <a class="navbar-item" href="{{ path('user_list') }}">
                     UTILISATEUR
                 </a>
 

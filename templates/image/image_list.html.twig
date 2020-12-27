@@ -1,0 +1,36 @@
+{# {% extends "admin/_template.html.twig" %} #}
+{% extends "_template.html.twig" %}
+
+{% block title %}Image{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <h1 class="title">Images: {{image_list|length}}</h1>
+    </div>
+
+      {% include "includes/flash.html.twig" %}
+
+    <table class="table is-fullwidth">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Description</th>
+                <th><a href="{{path('image_add')}}" class="button is-info is-small">Nouvelle image</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for image in image_list %}
+                <tr>
+                    <td>{{image.url|slice(0,25)}}</td>
+                    {# <td>{{image.produitConfigurable|slice(0,75)}}</td> #}
+                    <td>
+                        <a href="{{path('image_edit',{id:image.id})}}" class="button is-small is-success"><i class="fas fa-edit"></i></a>
+                        <a href="{{path('image_delete',{id:image.id})}}" class="button is-small is-danger"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                    
+                </tr>
+                
+            {% endfor %}
+        </tbody>
+    </table>    
+{% endblock %}

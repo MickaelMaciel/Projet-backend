@@ -1,0 +1,36 @@
+{# {% extends "admin/_template.html.twig" %} #}
+{% extends "_template.html.twig" %}
+
+{% block title %}Sous type produit{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <h1 class="title">Sous type produits: {{sousTypeProduit_list|length}}</h1>
+    </div>
+
+      {% include "includes/flash.html.twig" %}
+
+    <table class="table is-fullwidth">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Type produit</th>
+                <th><a href="{{path('sousTypeProduit_add')}}" class="button is-info is-small">Nouveau sousTypeProduit</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for sousTypeProduit in sousTypeProduit_list %}
+                <tr>
+                    <td>{{sousTypeProduit.name}}</td>
+                    <td>{{sousTypeProduit.TypeProduit.name}}</td>
+                    <td>
+                        <a href="{{path('sousTypeProduit_edit',{id:sousTypeProduit.id})}}" class="button is-small is-success"><i class="fas fa-edit"></i></a>
+                        <a href="{{path('sousTypeProduit_delete',{id:sousTypeProduit.id})}}" class="button is-small is-danger"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                    
+                </tr>
+                
+            {% endfor %}
+        </tbody>
+    </table>    
+{% endblock %}

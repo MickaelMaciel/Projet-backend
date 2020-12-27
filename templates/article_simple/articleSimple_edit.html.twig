@@ -1,0 +1,12 @@
+{# {% extends "admin/_template.html.twig" %} #}
+{% extends "_template.html.twig" %}
+
+{% block title %}Fabricant-{{articleSimple.name}}{% endblock %}
+
+{% block content %}
+<div class="section">
+    <h1 class="title">{{articleSimple.name}}</h1>
+    {% include "article_simple/_articleSimple_form.html.twig" %}
+    {% include "includes/flash.html.twig" %}
+</div>
+{% endblock %}

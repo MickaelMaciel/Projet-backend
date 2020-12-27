@@ -1,0 +1,38 @@
+{# {% extends "admin/_template.html.twig" %} #}
+{% extends "_template.html.twig" %}
+
+{% block title %}User{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <h1 class="title">Users: {{user_list|length}}</h1>
+    </div>
+
+      {% include "includes/flash.html.twig" %}
+
+    <table class="table is-fullwidth">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Roles</th>
+                <th>password</th>
+                <th><a href="{{path('user_add')}}" class="button is-info is-small">Nouveau user</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in user_list %}
+                <tr>
+                    <td>{{user.email}}</td>
+                    <td>{{user.roles}}</td>
+                     <td>{{user.password}}</td>
+                    <td>
+                        <a href="{{path('user_edit',{id:user.id})}}" class="button is-small is-success"><i class="fas fa-edit"></i></a>
+                        <a href="{{path('user_delete',{id:user.id})}}" class="button is-small is-danger"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                    
+                </tr>
+                
+            {% endfor %}
+        </tbody>
+    </table>    
+{% endblock %}

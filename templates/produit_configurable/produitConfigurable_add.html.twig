@@ -1,0 +1,16 @@
+{# {% extends "admin/_template.html.twig" %} #}
+{% extends "_template.html.twig" %}
+
+{% block title %}Nouveau produit configurable{% endblock %}
+
+{% block content %}
+<div class="section">
+    <h1 class="title">Nouveau produit configurable</h1>
+       
+       {% include "produit_configurable/_produitConfigurable_form.html.twig" %}
+    
+   
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{# {% extends "admin/_template.html.twig" %} #}
+{% extends "_template.html.twig" %}
+
+{% block title %}Nouveau sous type produit{% endblock %}
+
+{% block content %}
+<div class="section">
+    <h1 class="title">Nouvau sous type produit</h1>
+       
+       {% include "sous_type_produit/_sousTypeProduit_form.html.twig" %}
+    
+   
+</div>
+
+
+{% endblock %}

@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Controller\Admin;
+// namespace App\Controller\Admin;
+namespace App\Controller;
 
 use App\Entity\Fabricant;
 use App\Form\ConfirmationFormType;
@@ -16,7 +17,9 @@ use Symfony\Component\Routing\Annotation\Route;
  //@Route("/admin", name="admin_")
  
 
-class DashboardController extends AbstractController
+// class DashboardController extends AbstractController
+class FabricantController extends AbstractController
+
 {
    // /**
    //  * URL: /admin
